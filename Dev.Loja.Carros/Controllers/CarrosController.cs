@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Dev.Loja.Carros.Data;
 using Dev.Loja.Carros.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Dev.Loja.Carros.Controllers
 {
+    [Authorize]
     public class CarrosController : Controller
     {
         private readonly ApplicationDbContext _context;
